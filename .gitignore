@@ -11,3 +11,4 @@ yarn-error.log*
 .idea/watcherTasks.xml
 .idea/workspace.xml
 public/
+www/
