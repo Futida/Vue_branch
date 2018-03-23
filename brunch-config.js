@@ -4,7 +4,7 @@ module.exports = {
             entryPoints: {
                 'src/main.js': 'bundle.js',
             },
-            joinTo: 'bundle.js'
+            joinTo: 'bundle.js',
         }
     },
     paths: {
@@ -15,7 +15,10 @@ module.exports = {
         vue: {
             extractCSS: true,
             out: 'www/components.css'
-        }
+        },
+        babel: {
+            presets: ['es2015']
+        },
     },
     hooks: {
         preCompile() {
@@ -24,6 +27,5 @@ module.exports = {
         onCompile(generatedFiles, changedAssets) {
             console.log(generatedFiles.map(f => f.path));
         },
-    }
-
-}
+    },
+};
